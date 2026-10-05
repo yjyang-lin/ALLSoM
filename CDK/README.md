@@ -4,6 +4,17 @@ Run the following commands from the ALLSoM project root.
 
 ## Install Java
 
+OpenJDK 21 is included in `environment.yml` and is installed automatically when creating the Conda environment.
+
+Verify the installation:
+
+```bash
+java -version
+javac -version
+```
+
+If Java is not available, install it manually:
+
 ```bash
 conda install -c conda-forge openjdk=21
 ```
