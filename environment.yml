@@ -80,3 +80,4 @@ dependencies:
       - urllib3==1.26.20
       - yarl==1.17.1
       - zipp==3.21.0
+      - xgboost==2.1.2
