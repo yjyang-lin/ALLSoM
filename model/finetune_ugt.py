@@ -303,7 +303,7 @@ def write_summary(args, results):
 
 def main():
     parser = argparse.ArgumentParser(description="Fine-tune UGT models")
-    parser.add_argument("--gpu", type=int, default=6)
+    parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--run_all", action="store_true")
     parser.add_argument("--mol_pkl", default="features/molecule/UGT_features.pkl")

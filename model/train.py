@@ -487,7 +487,7 @@ def build_loaders(
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--gpu", type=int, default=7)
+    ap.add_argument("--gpu", type=int, default=0)
     ap.add_argument("--mol_pkl", type=str, default="features/molecule/pretrain_features1.pkl")
     ap.add_argument("--protein_pkl", type=str, default="features/protein/protein_pretrain.pkl")
     ap.add_argument("--split_mode", type=str, default="split_scaffold",

@@ -153,7 +153,7 @@ def evaluate(models: List[nn.Module], loader: DataLoader,
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--gpu", type=int, default=6)
+    parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--csv", default="inference/UGT/UGT_ex_val.csv")
     parser.add_argument("--protein_pkl", default="features/protein/protein_metab.pkl")
     parser.add_argument(

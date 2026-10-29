@@ -113,7 +113,7 @@ def main():
     parser.add_argument("--out_dir", default="features/protein",
                         help="Directory to save output pkl")
     parser.add_argument("--gpu", type=int, default=0,
-                        help="GPU id to use (default: 3). Set <0 to run on CPU.")
+                        help="GPU id to use (default: 0). Set <0 to run on CPU.")
     parser.add_argument("--feature_name", default="protein_pretrain",
                         help="Output filename prefix")
     parser.add_argument("--repr_layer", type=int, default=33,

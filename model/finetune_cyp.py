@@ -414,7 +414,7 @@ def write_summary(args, results):
 
 def main():
     parser = argparse.ArgumentParser(description="Fine-tune CYP models")
-    parser.add_argument("--gpu", type=int, default=5)
+    parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--run_all", action="store_true")
     parser.add_argument(

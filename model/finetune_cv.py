@@ -195,7 +195,7 @@ def run_fold(args, fold, records, train_idx, test_idx, prot_dict):
 
 def main():
     parser = argparse.ArgumentParser(description="AOX grouped five-fold cross-validation")
-    parser.add_argument("--gpu", type=int, default=2)
+    parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--mol_pkl", default="features/molecule/AOX_features.pkl")
     parser.add_argument("--protein_pkl", default="features/protein/protein_metab.pkl")
     parser.add_argument("--split_mode", choices=["smiles", "scaffold"], default="smiles")

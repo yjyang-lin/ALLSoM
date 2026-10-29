@@ -209,7 +209,7 @@ def main():
     )
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--num-workers", type=int, default=4, help="CDK feature workers")
-    parser.add_argument("--device", default="cuda:7" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--gpu", type=int, default=0)
     args = parser.parse_args()
 
     checkpoint_paths = [Path(args.model_dir) / f"fold_{i}/best.pt" for i in range(1, 6)]
@@ -234,7 +234,7 @@ def main():
     graph0, protein0, _, _ = dataset[0]
     edge_dim = int(graph0.edge_attr.shape[1]) if graph0.edge_attr.numel() else 0
     dimensions = (int(graph0.x.shape[1]), int(protein0.shape[1]), edge_dim)
-    device = torch.device(args.device)
+    device = torch.device(f"cuda:{args.gpu}" if torch.cuda.is_available() else "cpu")
     models = [load_model(path, config, dimensions, device)
               for path, config in zip(checkpoint_paths, configs)]
 
