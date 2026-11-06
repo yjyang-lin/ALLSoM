@@ -1,6 +1,6 @@
 # ALLSoM
 
-The SoM datasets used in this study will be released immediately upon acceptance of the manuscript!
+We invested several months and substantial manual effort in systematic literature collection and manual curation to assemble these SoM datasets. The complete datasets will be made publicly available immediately upon acceptance of the manuscript.
 
 ALLSoM is a transfer learning framework for predicting SoMs across major drug-metabolizing enzyme families. It combines molecular graph features with ESM-2 representations of enzyme sequences and transfers knowledge learned from enzymatic reactions to SoM prediction for CYP, UGT, AOX, FMO, and SULT. Atom-level SoM probabilities also support substrate assessment and candidate metabolite generation.
 
@@ -45,6 +45,8 @@ FMO and SULT classification uses a separate TabPFN environment. The tested versi
 
 ## Data preparation and feature extraction
 
+When running LocalMapper through [SynTemp](https://github.com/TieuLongPhan/SynTemp), setting `safe_mode=True` is strongly recommended.
+
 Known SoM atoms are identified by atom map number `:1`, and substrate labels use `1` for substrates and `0` for non-substrates.
 
 Generate ESM-2 residue representations:
@@ -53,6 +55,7 @@ Generate ESM-2 residue representations:
 python featurize/protein_esm2.py --input_dir pretrain_data/uniprot_sequences.csv --out_dir features/protein --feature_name protein_pretrain --gpu 0
 python featurize/protein_esm2.py --input_dir metab_data/enzyme_seq.csv --out_dir features/protein --feature_name protein_metab --gpu 0
 ```
+The pretraining ESM-2 embedding file occupies approximately 62 GB.
 
 Generate molecular graph features:
 
