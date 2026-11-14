@@ -1,6 +1,6 @@
 # ALLSoM
 
-We invested several months and substantial manual effort in systematic literature collection and manual curation to assemble these SoM datasets. The complete datasets will be made publicly available immediately upon acceptance of the manuscript.
+We invested several months and substantial effort in systematic literature collection and manual curation to assemble these SoM datasets. The complete datasets will be made publicly available immediately upon acceptance of the manuscript.
 
 ALLSoM is a transfer learning framework for predicting SoMs across major drug-metabolizing enzyme families. It combines molecular graph features with ESM-2 representations of enzyme sequences and transfers knowledge learned from enzymatic reactions to SoM prediction for CYP, UGT, AOX, FMO, and SULT. Atom-level SoM probabilities also support substrate assessment and candidate metabolite generation.
 
@@ -47,7 +47,7 @@ FMO and SULT classification uses a separate TabPFN environment. The tested versi
 
 When running LocalMapper through [SynTemp](https://github.com/TieuLongPhan/SynTemp), setting `safe_mode=True` is strongly recommended.
 
-Known SoM atoms are identified by atom map number `:1`, and substrate labels use `1` for substrates and `0` for non-substrates.
+Known SoM atoms are identified by atom map number `:1`, and substrate labels use `1` for substrates and `0` for non-substrates. To make manual SoM annotation easier, we developed the graphical editor `atom_mapper.py`.
 
 Generate ESM-2 residue representations:
 
